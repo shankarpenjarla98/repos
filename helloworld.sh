@@ -1,8 +1,9 @@
 #!/bin/bash
 
- echo "Welcome to shell scripting language"
 
- person1=shankar
- person2=sai
 
- echo "$person1 said hi to $person2
+ PERSON1=shankar
+ PERSON2=sai
+
+ echo "$PERSON1: Hi,How are you $PERSON2"
+ echo "$PERSON2:  yes,Iam fine $PERSON1"
