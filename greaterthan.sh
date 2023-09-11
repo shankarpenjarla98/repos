@@ -1,6 +1,6 @@
 #!/bin/bash
 
- num1=$1
+ num1=1
 
   if[ $num1 -gt 10 ]
   then
