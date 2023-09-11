@@ -3,8 +3,9 @@
 
 userid=$(id -u)
 
-validate()
-{
+validate(){
+
+
     if [ $1 -ne 0]
 
     then
@@ -14,6 +15,7 @@ validate()
        echo "installation is success"
        
 }
+
 
 if [ $userid -ne 0 ]
 
