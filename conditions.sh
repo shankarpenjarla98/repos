@@ -10,10 +10,9 @@ if [ $1 -ne 0]
     then
        echo "git installation is failed"
 
-    else
+     else
        echo "installation is success"
-
-
+       fi
 }
 
 

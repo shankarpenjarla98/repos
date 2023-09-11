@@ -22,3 +22,7 @@
     yum install mysql -y
 
     validate $? "mysql installation"
+
+    yum install postfix -y 
+
+    validate $? "postfix istallation"
