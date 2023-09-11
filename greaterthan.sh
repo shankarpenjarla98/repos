@@ -2,10 +2,9 @@
 
  num1=$1
 
-  if[ $1 -gt 10 ]
+  if[ $num1 -gt 10 ]
   then
-     echo "$1 is greater than 10"
-     exit 1
+     echo "$num1 is greater than 10"
   else
-     echo "$1 is not greater than 10"
+     echo "$num1 is not greater than 10"
    fi
