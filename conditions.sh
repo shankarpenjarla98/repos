@@ -12,6 +12,7 @@ validate()
 
     else
        echo "installation is success"
+       
 }
 
 if [ $userid -ne 0 ]
