@@ -2,8 +2,8 @@
 
 echo "Welcom to shell-scripting"
 
- PERSON1=shankar
- PERSON2=sai
+ PERSON1=ramesh
+ PERSON2=suresh
 
  echo "$PERSON1: Hi,How are you $PERSON2"
  echo "$PERSON2:  yes,Iam fine $PERSON1"
