@@ -1,2 +1,3 @@
 #!/bin/bash
-Hello This is Kitan file
+
+ echo "Hello, This is Kitan file"
