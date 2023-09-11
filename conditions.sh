@@ -3,6 +3,17 @@
 
 userid=$(id -u)
 
+validate()
+{
+    if [ $1 -ne 0]
+
+    then
+       echo "git installation is failed"
+
+    else
+       echo "installation is success"
+}
+
 if [ $userid -ne 0 ]
 
 then
@@ -12,6 +23,8 @@ then
    # echo "Now you are good to install git "
 fi
 
-yum install git -y
+yum mysql git -y
+
+validate $? "Git installation"
 
   
