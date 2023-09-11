@@ -3,12 +3,9 @@
 
 userid=$(id -u)
 
-validate()
+validate(){
 
-{
-
-
-    if [ $1 -ne 0]
+if [ $1 -ne 0]
 
     then
        echo "git installation is failed"
@@ -16,7 +13,10 @@ validate()
     else
        echo "installation is success"
 
+
 }
+
+
 
 
 if [ $userid -ne 0 ]
