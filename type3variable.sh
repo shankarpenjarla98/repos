@@ -3,7 +3,7 @@
 person1=$1
 person2=$2
 
-echo "$PERSON1: Hi,How are you $PERSON2"
-echo "$PERSON2:  yes,Iam fine $PERSON1"
-echo "$PERSON1: what are doing  now"
-echo "$PERSON2: Yeah, Iam working as softwares engineer"
+echo "$person1: Hi,How are you $person2"
+echo "$person2:  yes,Iam fine $person1"
+echo "$person1: what are doing  now"
+echo "$person2: Yeah, Iam working as softwares engineer"
