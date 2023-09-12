@@ -11,10 +11,10 @@ n="\e[0m"
 validation(){
     if [ $1 -ne 0 ]
     then
-       echo "  $2  $r installation got failed $n"
+       echo  -e " $2  $r installation got failed $n"
        exit 1
     else
-      echo  " $2  $g installation got success $n"
+      echo   -e " $2  $g installation got success $n"
     fi
 }
 
