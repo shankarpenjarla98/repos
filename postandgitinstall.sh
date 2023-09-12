@@ -12,19 +12,19 @@ N="\e[0m"
 validate(){
     if [ $1 -ne 0 ]
     then 
-    echo "$R $2 not yet installed need to installed $N"
+    echo -e "$R $2 not yet installed need to installed $N"
     else
-    echo "$G $2 installed successfully $N"
+    echo -e "$G $2 installed successfully $N"
     fi
 
 }
 
 if [ $userid -ne 0]
 then
-   echo "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
+   echo -e "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
   exit 1
 else
-   echo "$Y NOW YOUR IN ROOT ACCESS"
+   echo -e "$Y NOW YOUR IN ROOT ACCESS $N"
 fi
 
 for i in $@
@@ -32,10 +32,10 @@ do
 yum list installed $i
 if [ $? -ne 0]
 then
-  echo "$R not yet installed need to install $N"
+  echo -e "$R not yet installed need to install $N"
 yum install $i -y
 validate $? "$1"
 else
-  echo "$i as already installed"
+  echo -e  "$i as already installed $N"
 fi
 done
