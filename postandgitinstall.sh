@@ -29,11 +29,11 @@ fi
 
 for i in $@
 do
-yum list installed $i
-if [ $? -ne 0]
+yum list installed $i &>>$logfile
+if [ $? -ne 0 ]
 then
   echo -e "$R not yet installed need to install $N"
-yum install $i -y
+yum install $i -y &>>$logfile
 validate $? "$1"
 else
   echo -e  "$i as already installed $N"
