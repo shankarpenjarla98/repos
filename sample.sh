@@ -20,7 +20,7 @@ echo -e "$y now you good to go for installation $n "
 fi
 
 validate(){
-    if [$1 -ne 0 ]
+    if [ $1 -ne 0 ]
     then
     echo -e " $r $2 installation got failed $n"
     exit 1
