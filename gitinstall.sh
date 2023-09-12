@@ -4,14 +4,16 @@ userac=$(id -u)
 date=$(date +%F)
 scriptfile=$0
 logfile1=/tmp/$scriptfile-$date.log
+r="/e[31m"
+g="/e[32m"
 
 validation(){
     if [ $1 -ne 0 ]
     then
-       echo " $2 installation got failed"
+       echo "  $r$2  installation got failed"
        exit 1
     else
-      echo  " $2 installation got success"
+      echo  " $g$2 installation got success"
     fi
 }
 
