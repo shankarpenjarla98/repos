@@ -37,10 +37,10 @@ do
 yum list installed $i &>>$logfile
 if [ $? -ne 0 ]
 then
-echo "$i not installed let's install it"
+echo -e "$i not installed let's install it"
 yum install git -y  &>>$logfile
 validate $? "$i"
 else
-echo "$y is already installed $n"
+echo -e "$y is already installed $n"
 fi
 done
