@@ -24,6 +24,7 @@ validations(){
     exit 1
     else
        echo "$2 $Green installation done successfull $Nor"
+    fi
 }
 
 for i in $@
