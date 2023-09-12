@@ -6,12 +6,13 @@ script_name=$0
 logfile=/tmp/$script_name-$date.log
 
 valid(){
-    if [$1 -ne 0]
+    if [ $1 -ne 0 ]
+    
     then
-       echo "$2  failed"
+       echo "$2.......failed"
        exit 1
     else
-       echo  "$2  success"
+       echo  "$2.......success"
     fi
 
 }
@@ -25,13 +26,12 @@ fi
 
 yum install git -y
 
-valid $? "git installation
+valid $?  "git installation
 
 yum install mqsql -y
 
-valid $? "mysql installation"
+valid $?  "mysql installation"
 
 yum install postfix -y
 
-valid $? "postfix installation"
-
+valid $?  "postfix installation"
