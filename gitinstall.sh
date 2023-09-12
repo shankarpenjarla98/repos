@@ -22,13 +22,10 @@ else
    echo "good to go with installation"
 fi
 
-yum install git -y
+yum install git -y &>>$logfile1
 
-validation $? "git" &>>$logfile1 
+validation $? "git"  
 
-yum install postfix -y 
+yum install postfix -y &>>$logfile1
 
-validation $? "postfix" &>>$logfile1
-
-
-
+validation $? "postfix" 
