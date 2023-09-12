@@ -1,7 +1,7 @@
 #!/bin/bash
 
 date=$(date +%f)
-logfile=/scriptlogs/$date.log
+
 userid=$(id -u)
 
 R="\e[31m"
@@ -13,6 +13,7 @@ validate(){
     if [ $1 -ne 0 ]
     then 
     echo -e "$R $2 not yet installed need to installed $N"
+    exit 1
     else
     echo -e "$G $2 installed successfully $N"
     fi
@@ -29,12 +30,12 @@ fi
 
 for i in $@
 do
-yum list installed $i &>>$logfile
+yum list installed $i 
 if [ $? -ne 0 ]
 then
-echo -e "$R not yet installed need to install $N"
-yum install $i -y &>>$logfile
-validate $? "$1"
+echo -e "$R $1 not yet installed need to install $N"
+yum install $i -y 
+validate $? "$i"
 else
   echo -e  "$i as already installed $N"
 fi
