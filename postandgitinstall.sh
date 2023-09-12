@@ -9,6 +9,15 @@ G="\e[32m"
 Y="\e[33m"
 N="\e[0m"
 
+
+if [ $userid -ne 0]
+then
+echo -e "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
+exit 1
+else
+echo -e "$Y NOW YOUR IN ROOT ACCESS $N"
+fi
+
 validate(){
     if [ $1 -ne 0 ]
     then 
@@ -20,13 +29,7 @@ validate(){
 
 }
 
-if [ $userid -ne 0]
-then
-echo -e "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
-exit 1
-else
-echo -e "$Y NOW YOUR IN ROOT ACCESS $N"
-fi
+
 
 for i in $@
 do
