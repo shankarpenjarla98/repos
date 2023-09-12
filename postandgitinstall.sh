@@ -21,10 +21,10 @@ validate(){
 
 if [ $userid -ne 0]
 then
-   echo -e "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
-  exit 1
+echo -e "$R ERROR:PLEASE TRY TO DO WITH ROOT ACCESS $N"
+exit 1
 else
-   echo -e "$Y NOW YOUR IN ROOT ACCESS $N"
+echo -e "$Y NOW YOUR IN ROOT ACCESS $N"
 fi
 
 for i in $@
@@ -32,7 +32,7 @@ do
 yum list installed $i &>>$logfile
 if [ $? -ne 0 ]
 then
-  echo -e "$R not yet installed need to install $N"
+echo -e "$R not yet installed need to install $N"
 yum install $i -y &>>$logfile
 validate $? "$1"
 else
