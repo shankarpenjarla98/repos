@@ -3,15 +3,16 @@
 userac=$(id -u)
 
 validation(){
-    if [$1 -ne 0]
+    if [ $1 -ne 0 ]
     then
-       echo "installation got failed"
+       echo " $2 installation got failed"
+       exit 1
     else
-      echo  "installation got success"
+      echo  " $2 installation got success"
     fi
 }
 
-if [$userac -ne 0]
+if [ $userac -ne 0 ]
 then 
    echo "please try with root access"
 else
@@ -19,4 +20,6 @@ else
 fi
 
 yum install git -y
+
+validation $? "git"
 
