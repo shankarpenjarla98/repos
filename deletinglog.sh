@@ -9,4 +9,5 @@ findtodel=$(find $apt_dir -name "*.log" -type f -mtime +14)
 while read line
 do
 echo "deleting $line" &>>$logfile
+rm -rf $line
 done <<< $findtodel
