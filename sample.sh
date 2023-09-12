@@ -10,6 +10,15 @@ g="\e[32m"
 y="\e[33m"
 n="\e[0m"
 
+
+if [ $accessid -ne 0 ]
+then
+echo -e "$r error please try to install with root access $n "
+exit 1
+else
+echo -e "$y now you good to go for installation $n "
+fi
+
 validate(){
     if [$1 -ne 0 ]
     then
@@ -21,13 +30,7 @@ validate(){
 
 }
 
-if [ $accessid -ne 0 ]
-then
-echo -e "$r error please try to install with root access $n "
-exit 1
-else
-echo -e "$y now you good to go for installation $n "
-fi
+
 
 for i in $@
 do
